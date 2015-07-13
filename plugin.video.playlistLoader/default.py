@@ -102,6 +102,7 @@ def m3uCategory(url):
 	common.SaveList(tmpListFile, tmpList)
 		
 def PlayUrl(name, url, iconimage=None):
+	url = url + "|User-Agent=NSPlayer/7.10.0.3059"
 	print '--- Playing "{0}". {1}'.format(name, url)
 	listitem = xbmcgui.ListItem(path=url, thumbnailImage=iconimage)
 	listitem.setInfo(type="Video", infoLabels={ "Title": name })
